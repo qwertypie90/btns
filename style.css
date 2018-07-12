@@ -1,0 +1,11 @@
+body {
+    background-image: url("https://cdn-images-1.medium.com/max/2000/1*xJxm1VcQufN7czmDhy1l7Q.png");
+    background-size: cover;
+}
+
+.btn {
+    background-image: url("https://png2.kisspng.com/sh/21058913ac2c64acc9782695def9e218/L0KzQYm3VcE2N6h2j5H0aYP2gLBuTgdqdpV0jAU2OUWwc7F0kQV1baMygdV4boOwf8HskvF1cZ9sReVEc4TofcS0lBlvbJD8RadqZnG8R7brgcFkPGQ1Rqo8OEW6RIi6UcUzPmQ8SqU8M0a5Qoe1kP5o/kisspng-windows-95-computer-icons-operating-systems-window-5afa97eda1c430.8385747315263723336626.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}

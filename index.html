@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>coding challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button onclick="renderButtons()">Add</button>
+    <button onclick="slowly()">Delete Slow</button>
+    <button onclick="deleteAll()">Delete All</button>
+    <div id="buttons"></div>
+    <script>
+    var parentButtonsContainer = document.getElementById("buttons")
+    var addedButtons = false;
+
+    function renderButtons() {
+        if (addedButtons === false) {
+            for (var i = 0; i < 40; i++) {
+                var button = document.createElement("BUTTON");
+                button.className = "btn";
+                button.id = "button" + [i];
+                button.addEventListener("click", getId)
+                parentButtonsContainer.append(button);
+                addedButtons = true;
+            }
+        }
+    }
+
+    function getId() {
+        alert("Hello! The ID of the button you clicked is " + this.id);
+    }
+
+
+    function slowly() {
+        var buttons = document.getElementsByClassName("btn");
+        // assign the id that is returned to deleteInterval
+        var deleteInterval = setInterval(function() {
+            if (buttons.length !== 0) {
+                parentButtonsContainer.removeChild(buttons[0]);
+            } else {
+                clearInterval(deleteInterval);
+                addedButtons = false;
+            }
+        }, 1000);
+    }
+
+    function deleteAll() {
+        parentButtonsContainer.innerHTML = "";
+        addedButtons = false;
+    }
+    </script>
+</body>
+
+</html>
